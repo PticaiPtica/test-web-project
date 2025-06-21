@@ -23,7 +23,7 @@ public class HomeController {
     private final String baseUrl = "https://www.omdbapi.com";
 
     @GetMapping("/{title}")
-    public ResponseEntity<?> getAll(@PathVariable String title) {
+     public ResponseEntity<?> getAll(@PathVariable String title) {
         String url = baseUrl + "/?s=" + title + "&apiKey=" + apiKey + "&page=";
         RestTemplate restTemplate = new RestTemplate();
         System.out.println("Send request #" + 1);
